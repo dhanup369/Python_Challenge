@@ -28,5 +28,12 @@ with open ('budget_data.csv','r')as file:
      print("Average Change: $"+str(average_diff))
      print("Greatest increase in profits: ",month[x],"($"+str(max)+")")
      print("Greatest decrease in profits: ",month[y],"($"+str(min)+")")
-
      
+     with open("outputfile.txt",'w') as op:
+         op.write("Financial Analysis:\n")
+         op.write("...........................\n")
+         op.write("Total Months: "+str(month_count)+"\n")
+         op.write("Total: $"+str(total)+"\n")
+         op.write("Average Change: $"+str(average_diff)+"\n")
+         op.write("Greatest increase in profits: "+str(month[x])+"($"+str(max)+")"+"\n")
+         op.write("Greatest decrease in profits: "+str(month[y])+"($"+str(min)+")"+"\n")
