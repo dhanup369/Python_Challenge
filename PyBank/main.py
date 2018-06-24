@@ -6,20 +6,27 @@ with open ('budget_data.csv','r')as file:
      total=0
      profit=[]
      diff=0
-     
+     month=[]
      
      for row in reader:
          month_count=month_count+1
          total=total+int(row[1])
          profit.append(int(row[1]))
+         month.append(row[0])
          
      for i in range(len(profit)-1):
          diff=diff+(profit[i+1]-profit[i])   
      average_diff=diff/(len(profit)-1)
      max=max(profit)
-     print(max)
+     x=profit.index(max)
      min=min(profit)
-     print(min) 
+     y=profit.index(min)
+     
+     print("Financial Analysis: \n......................................")
      print("Total Months: ",month_count)
      print("Total: $"+str(total))
      print("Average Change: $"+str(average_diff))
+     print("Greatest increase in profits: ",month[x],"($"+str(max)+")")
+     print("Greatest decrease in profits: ",month[y],"($"+str(min)+")")
+
+     
