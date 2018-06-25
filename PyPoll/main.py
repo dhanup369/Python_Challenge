@@ -14,7 +14,7 @@ with open('election_data.csv', mode='r') as infile:
     reader = csv.reader(infile)
     csv_header=next(reader)             #CSV file has header in the first row
     for row in reader:
-        votes=votes+1                   #Counting the rows to counts the total number of votes
+        votes=votes+1                   #Counting the rows to count the total number of votes
         voter_id.append(int(row[0]))    #Converting Voters_id column into a list 
         candidate.append(row[2])        #Converting candidate column into a list
     for i in set(candidate):            #Finding the unique candidate names
