@@ -30,7 +30,7 @@ with open('paragraph_2.txt','r') as para:
     
     
     ##Writing the results into a text file to export.
-    with open ("outputfile.txt",'w') as file:
+    with open ("outputfile2.txt",'w') as file:
         file.write("Paragraph Analysis\n--------------------------------\nApproximate word count: "+str(word_count)
     +"\nApproximate sentence count: "+str(len(sentences))+"\nAverage letter count: "+str(aver_letter_count)
     +"\nAverage sentence length: "+str(aver_sentence_len))  
