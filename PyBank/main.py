@@ -46,3 +46,4 @@ with open ('budget_data.csv','r')as file:
          op.write("Average Change: $"+str(average_diff)+"\n")
          op.write("Greatest increase in profits: "+str(month[x+1])+"($"+str(maxi)+")"+"\n")
          op.write("Greatest decrease in profits: "+str(month[y+1])+"($"+str(mini)+")"+"\n")
+    

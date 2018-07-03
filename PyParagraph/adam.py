@@ -5,10 +5,10 @@ with open('adam.txt','r') as para:
     #Initializing variables
     wordlen=[]
     para_word_len=[]
-
+    
     words=txt.split(' ')  #Spliting the paragraph into words 
     word_count=len(words) #Calculating the total number of words
-    
+    print(words)
     for i in words:
         wordlen.append(len(i)) #Appending the length of each word into a list
     aver_letter_count=round(sum(wordlen)/len(wordlen),3)  #Finding the average letter count
@@ -30,7 +30,7 @@ with open('adam.txt','r') as para:
     
     
     ##Writing the results into a text file to export.
-    with open ("adam.txt",'w') as file:
+    with open ("adam1.txt",'w') as file:
         file.write("Paragraph Analysis\n--------------------------------\nApproximate word count: "+str(word_count)
     +"\nApproximate sentence count: "+str(len(sentences))+"\nAverage letter count: "+str(aver_letter_count)
     +"\nAverage sentence length: "+str(aver_sentence_len))  
